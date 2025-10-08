@@ -1,11 +1,12 @@
-# DISTGNN: Distinguishable Spatio-Temporal Graph Neural Network for Traffic Forecasting
+# Spatio-temporal Distinguishability Modeling for Traffic Flow Prediction
 
-This is a official code release of DISTGNN.
+This is a official code release of DISTNet.
 
 This code is mainly based on [BasicTS](https://github.com/zezhishao/BasicTS),
 
 some codes are from [STD_MAE](https://github.com/Jimmy-7664/STD_MAE/blob/main/stdmae).
 
+The complete code will be submitted and presented after the paper is published.
 
 
 ## Dependencies
@@ -66,17 +67,17 @@ datasets
 For example,run the following command to pre-training the dataset PEMS03.
 
 ```
-python experiments/train.py --cfg='baselines/DISTGNN/LTSRE_PEMS03.py' --gpus='0'
+python experiments/train.py --cfg='baselines/DISTNet/LTSRE_PEMS03.py' --gpus='0'
 ```
 
 After pre-training , copy your pre-trained best checkpoint to `mask_save/`.
 
-### Training on DISTGNN
+### Training on DISTNet
 
 For example,run the following command to training the dataset PEMS03.
 
 ```
-python experiments/train.py --cfg='baselines/DISTGNN/DISTGNN_PEMS03.py' --gpus='0'
+python experiments/train.py --cfg='baselines/DISTNet/DISTNet_PEMS03.py' --gpus='0'
 ```
 
 And all the checkpoints and log will be saved in `checkpoints` directory after training.
@@ -84,7 +85,7 @@ And all the checkpoints and log will be saved in `checkpoints` directory after t
 ### Evaluation
 
 ```
-python experiments/inference.py --cfg='baselines/DISTGNN/DISTGNN_PEMS03.py' --gpus='0'
+python experiments/inference.py --cfg='baselines/DISTNet/DISTNet_PEMS03.py' --gpus='0'
 ```
 
 
